@@ -46,17 +46,17 @@ _limit_: `Your limit here`,
 
 <!-- Your Code Goes Here -->
 
-_filter_: `Your filter here`,
-_projection_: `Your projection here`,
-_sort_: `Your sort here`,
-_skip_: `Your skip here`,
-_limit_: `Your limit here`,
+_filter_: {$and:[  {number_of_employees:{$lt:1000}}, {founded*year:{$lt:2005}} ]},
+\_projection*: `Your projection here`,
+_sort_: {number*of_employees:1},
+\_skip*: `Your skip here`,
+_limit_: 10,
 
 ### 6. All the companies that don't include the `partners` field.
 
 <!-- Your Code Goes Here -->
 
-_filter_: `Your filter here`,
+_filter_: {partners:{$exists:false}},
 _projection_: `Your projection here`,
 _sort_: `Your sort here`,
 _skip_: `Your skip here`,
@@ -66,8 +66,8 @@ _limit_: `Your limit here`,
 
 <!-- Your Code Goes Here -->
 
-_filter_: `Your filter here`,
-_projection_: `Your projection here`,
+_filter_: {category*code:{$eq:null}},
+\_projection*: `Your projection here`,
 _sort_: `Your sort here`,
 _skip_: `Your skip here`,
 _limit_: `Your limit here`,
@@ -76,9 +76,9 @@ _limit_: `Your limit here`,
 
 <!-- Your Code Goes Here -->
 
-_filter_: `Your filter here`,
-_projection_: `Your projection here`,
-_sort_: `Your sort here`,
+_filter_: {$and: [ {number_of_employees:{$gte:100}}, {number*of_employees:{$lt:1000}}]},
+\_projection*: {name:1, number*of_employees:1, \_id:0},
+\_sort*: `Your sort here`,
 _skip_: `Your skip here`,
 _limit_: `Your limit here`,
 
@@ -88,7 +88,7 @@ _limit_: `Your limit here`,
 
 _filter_: `Your filter here`,
 _projection_: `Your projection here`,
-_sort_: `Your sort here`,
+_sort_: {ipo:-1},
 _skip_: `Your skip here`,
 _limit_: `Your limit here`,
 
@@ -97,20 +97,20 @@ _limit_: `Your limit here`,
 <!-- Your Code Goes Here -->
 
 _filter_: `Your filter here`,
-_projection_: `Your projection here`,
-_sort_: `Your sort here`,
-_skip_: `Your skip here`,
-_limit_: `Your limit here`,
+_projection_: {number*of_employees:1,name:1},
+\_sort*: {number*of_employees:-1},
+\_skip\*: `Your skip here`,
+\_limit*: 10,
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 
 <!-- Your Code Goes Here -->
 
-_filter_: `Your filter here`,
-_projection_: `Your projection here`,
+_filter_: {$and: [ {founded_month:{$gte:4}},{founded*month:{$lte:7}} ] },
+\_projection*: `Your projection here`,
 _sort_: `Your sort here`,
 _skip_: `Your skip here`,
-_limit_: `Your limit here`,
+_limit_: 1000,
 
 ### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 
