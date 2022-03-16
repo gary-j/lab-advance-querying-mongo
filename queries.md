@@ -116,8 +116,8 @@ _limit_: 1000,
 
 <!-- Your Code Goes Here -->
 
-_filter_: `Your filter here`,
-_projection_: `Your projection here`,
+_filter_: {$and: [ {founded_year:{$lt:2000}}, {"acquisition.price*amount":{$gt:10000000}} ] },
+\_projection*: `Your projection here`,
 _sort_: `Your sort here`,
 _skip_: `Your skip here`,
 _limit_: `Your limit here`,
@@ -126,9 +126,9 @@ _limit_: `Your limit here`,
 
 <!-- Your Code Goes Here -->
 
-_filter_: `Your filter here`,
-_projection_: `Your projection here`,
-_sort_: `Your sort here`,
+_filter_: {$and: [{"acquisition.price_amount":{$gte:10000000}}, {"acquisition.acquired*year":{$gt:2000}} ]},
+\_projection\*: {name:1, acquisition:1, \_id:0},
+\_sort*: `Your sort here`,
 _skip_: `Your skip here`,
 _limit_: `Your limit here`,
 
